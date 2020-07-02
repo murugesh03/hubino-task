@@ -1,0 +1,14 @@
+@import "../../utilities/variables.scss";
+
+.sidebar {
+  height: 100vh;
+  background-color: $lightGrey;
+  & ul {
+    & li {
+      list-style: none;
+    }
+  }
+  &-icon {
+    font-size: 30px;
+  }
+}

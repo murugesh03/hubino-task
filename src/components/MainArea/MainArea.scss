@@ -1,0 +1,8 @@
+@import "../../utilities/variables.scss";
+
+.main-area {
+  background-color: $slightDarkGray;
+  &-container {
+    margin-top: 5rem;
+  }
+}
