@@ -13,15 +13,15 @@ const MainArea = (addCustomer, updateCustomer) => {
     <Col className="main-area p-0" md={10}>
       <Container className="main-area-container">
         <Switch>
-          <Route path="/" exact component={() => <CustomerList />} />
-          <Route
-            path="/add contact"
-            component={() => <AddCustomer addCustomer={addCustomer} />}
-          />
-          <Route
-            path="/update contact"
-            component={() => <UpdateCustomer updateCustomer={updateCustomer} />}
-          />
+          <Route path="/" exact>
+            <CustomerList />
+          </Route>
+          <Route path="/addcontact">
+            <AddCustomer addCustomer={addCustomer} />
+          </Route>
+          <Route path="/updatecontact">
+            <UpdateCustomer updateCustomer={updateCustomer} />
+          </Route>
         </Switch>
       </Container>
     </Col>

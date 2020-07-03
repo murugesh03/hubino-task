@@ -18,7 +18,7 @@ const SideBar = () => {
             </Link>
           </li>
           <li className="text-center py-4">
-            <Link to="/add customer">
+            <Link to="/addcustomer">
               <span className="sidebar-icon">
                 <MdPlaylistAdd />
               </span>
@@ -26,7 +26,7 @@ const SideBar = () => {
             </Link>
           </li>
           <li className="text-center py-4">
-            <Link to="/update contact">
+            <Link to="/updatecontact">
               <span className="sidebar-icon">
                 <MdUpdate />
               </span>
