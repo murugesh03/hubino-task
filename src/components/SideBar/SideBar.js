@@ -9,7 +9,6 @@ const SideBar = () => {
       <aside className="sidebar">
         <ul className="my-5">
           <li className="text-center py-4">
-            {" "}
             <Link to="/">
               <span className="sidebar-icon">
                 <MdList />
@@ -18,7 +17,7 @@ const SideBar = () => {
             </Link>
           </li>
           <li className="text-center py-4">
-            <Link to="/addcustomer">
+            <Link to="/add_customer">
               <span className="sidebar-icon">
                 <MdPlaylistAdd />
               </span>
@@ -26,7 +25,7 @@ const SideBar = () => {
             </Link>
           </li>
           <li className="text-center py-4">
-            <Link to="/updatecontact">
+            <Link to="/update_customer">
               <span className="sidebar-icon">
                 <MdUpdate />
               </span>

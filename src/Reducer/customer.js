@@ -3,6 +3,7 @@ import customerData from "../Data";
 const customer = (state = customerData, action) => {
   switch (action.type) {
     case "ADD_CUSTOMER":
+      console.log(action.payload);
       return [...state, action.payload];
     case "UPDATE_CUSTOMER":
       let newState = [];
@@ -19,4 +20,5 @@ const customer = (state = customerData, action) => {
       return state;
   }
 };
+
 export default customer;

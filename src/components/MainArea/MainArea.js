@@ -8,22 +8,22 @@ import CustomerList from "./CustomerList/CustomerList";
 import AddCustomer from "./AddCustomer/AddCustomer";
 import UpdateCustomer from "./UpdateCustomer/UpdateCustomer";
 
-const MainArea = (addCustomer, updateCustomer) => {
+const MainArea = ({ addCustomer, updateCustomer }) => {
   return (
     <Col className="main-area p-0" md={10}>
       <Container className="main-area-container">
         <Switch>
-          <Route path="/" exact>
-            <CustomerList />
-          </Route>
-          <Route path="/addcustomer">
-            <AddCustomer addCustomer={addCustomer} />
-            {/* <p>hi</p> */}
-          </Route>
-          <Route path="/updatecontact">
-            <UpdateCustomer updateCustomer={updateCustomer} />
-            {/* <p>hey</p> */}
-          </Route>
+          <Route path="/" exact component={CustomerList} />
+
+          <Route
+            path="/add_customer"
+            component={() => <AddCustomer addCustomer={addCustomer} />}
+          />
+
+          <Route
+            path="/update_customer"
+            component={() => <UpdateCustomer updateCustomer={updateCustomer} />}
+          />
         </Switch>
       </Container>
     </Col>
@@ -34,4 +34,4 @@ const mapDispatchToProps = (dispatch) => ({
   updateCustomer: (p) => dispatch(updateCustomer(p)),
 });
 
-export default connect(mapDispatchToProps)(MainArea);
+export default connect(null, mapDispatchToProps)(MainArea);
