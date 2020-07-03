@@ -16,11 +16,13 @@ const MainArea = (addCustomer, updateCustomer) => {
           <Route path="/" exact>
             <CustomerList />
           </Route>
-          <Route path="/addcontact">
+          <Route path="/addcustomer">
             <AddCustomer addCustomer={addCustomer} />
+            {/* <p>hi</p> */}
           </Route>
           <Route path="/updatecontact">
             <UpdateCustomer updateCustomer={updateCustomer} />
+            {/* <p>hey</p> */}
           </Route>
         </Switch>
       </Container>
