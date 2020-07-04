@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Card, Table, Button } from "react-bootstrap";
 import { connect } from "react-redux";
 import { updateCustomer } from "../../../Action/index";
@@ -6,11 +6,6 @@ import UpdateCustomer from "../UpdateCustomer/UpdateCustomer";
 const CustomerList = ({ customer, updateCustomer }) => {
   const [modalShow, setModalShow] = useState(false);
   const [editModalData, setEditModalData] = useState({});
-  console.log(editModalData);
-
-  // useEffect(() => {
-  //   setModalShow(true);
-  // }, [editModalData]);
 
   return (
     <>

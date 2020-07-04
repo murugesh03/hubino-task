@@ -1,37 +1,37 @@
 import React from "react";
-import { Col } from "react-bootstrap";
-import { Link } from "react-router-dom";
 import { MdUpdate, MdList, MdPlaylistAdd } from "react-icons/md";
 import "./SideBar.scss";
-const SideBar = () => {
+import { Nav } from "react-bootstrap";
+
+const SideBar = (activeId) => {
   return (
     <aside className="sidebar position-fixed">
-      <ul className="my-5">
-        <li className="text-center py-4">
-          <Link to="/">
-            <span className="sidebar-icon">
+      <Nav className="d-flex flex-column my-5 sidbar-list" defaultActiveKey="/">
+        <Nav.Item>
+          <Nav.Link href="/">
+            <p className="sidebar-icon text-center">
               <MdList />
-            </span>
-            <p className="text-capitalize">customer list</p>
-          </Link>
-        </li>
-        <li className="text-center py-4">
-          <Link to="/add_customer">
-            <span className="sidebar-icon">
+            </p>
+            <p className="text-capitalize text-center">customer list</p>
+          </Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link href="/add_customer" eventKey="link-1">
+            <p className="sidebar-icon text-center">
               <MdPlaylistAdd />
-            </span>
-            <p className="text-capitalize">add customer</p>
-          </Link>
-        </li>
-        <li className="text-center py-4">
-          <Link to="/update_customer">
-            <span className="sidebar-icon">
+            </p>
+            <p className="text-capitalize text-center">add customer</p>
+          </Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link href="/update_customer" eventKey="link-2">
+            <p className="text-center sidebar-icon">
               <MdUpdate />
-            </span>
-            <p className="text-capitalize">update customer</p>
-          </Link>
-        </li>
-      </ul>
+            </p>
+            <p className="text-capitalize text-center">update customer</p>
+          </Nav.Link>
+        </Nav.Item>
+      </Nav>
     </aside>
   );
 };

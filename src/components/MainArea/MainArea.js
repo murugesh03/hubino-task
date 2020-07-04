@@ -9,7 +9,7 @@ import AddCustomer from "./AddCustomer/AddCustomer";
 
 const MainArea = ({ addCustomer }) => {
   return (
-    <div className="main-area ">
+    <div className="main-area">
       <Container className="main-area-container">
         <Switch>
           <Route path="/" exact component={() => <CustomerList />} />
