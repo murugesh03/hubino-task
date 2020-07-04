@@ -10,3 +10,4 @@ export const updateCustomer = (payload) => {
     payload: payload,
   };
 };
+  

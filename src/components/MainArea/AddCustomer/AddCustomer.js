@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Card, Form, Col, Button } from "react-bootstrap";
-import uuid from "react-uuid";
+
 const AddCustomer = ({ addCustomer }) => {
   const [addData, setData] = useState({
     name: "",
@@ -8,7 +8,7 @@ const AddCustomer = ({ addCustomer }) => {
     countryCode: "",
     mobileNo: "",
     gender: "",
-    id: uuid,
+    id: Math.floor(Math.random() * 100),
   });
 
   const changeData = (e) => {
@@ -17,7 +17,18 @@ const AddCustomer = ({ addCustomer }) => {
       [e.target.name]: e.target.value,
     });
   };
-
+  const saveData = (e) => {
+    e.preventDefault();
+    addCustomer(addData);
+    setData({
+      name: "",
+      emailId: "",
+      countryCode: "",
+      mobileNo: "",
+      gender: "",
+      id: Math.floor(Math.random() * 100),
+    });
+  };
   return (
     <Card>
       <Form className="p-5">
@@ -73,21 +84,15 @@ const AddCustomer = ({ addCustomer }) => {
               value={addData.gender}
               onChange={changeData}
             >
-              <option>select</option>
-              <option>Male</option>
-              <option>Female</option>
-              <option>Transgender</option>
+              {["select", "Male", "Female", "Transgender"].map((v, i) => (
+                <option key={i} value={v.toLowerCase()}>
+                  {v}
+                </option>
+              ))}
             </Form.Control>
           </Form.Group>
         </Form.Row>
-        <Button
-          variant="primary"
-          type="submit"
-          onClick={(e) => {
-            e.preventDefault();
-            addCustomer(addData);
-          }}
-        >
+        <Button variant="primary" type="submit" onClick={saveData}>
           Submit
         </Button>
       </Form>
