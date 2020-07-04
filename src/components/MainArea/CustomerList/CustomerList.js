@@ -1,15 +1,23 @@
 import React, { useState } from "react";
 import { Card, Table, Button } from "react-bootstrap";
+import { MdMoreHoriz } from "react-icons/md";
 import { connect } from "react-redux";
 import { updateCustomer } from "../../../Action/index";
 import UpdateCustomer from "../UpdateCustomer/UpdateCustomer";
+import "./CustomerList.scss";
 const CustomerList = ({ customer, updateCustomer }) => {
   const [modalShow, setModalShow] = useState(false);
   const [editModalData, setEditModalData] = useState({});
 
   return (
     <>
-      <Card className="px-5 ">
+      <Card className="px-5 card-view">
+        <Card.Title className="pt-3 pb-2 mx-2  card-heading">
+          Customer List
+          <a href="#" className="float-right">
+            <MdMoreHoriz />
+          </a>
+        </Card.Title>
         <Table responsive>
           <thead>
             <tr>
@@ -18,6 +26,7 @@ const CustomerList = ({ customer, updateCustomer }) => {
               <td className="text-capitalize">email </td>
               <td className="text-capitalize">mobile number</td>
               <td className="text-capitalize">gender</td>
+              <td className="text-capitalize">edit</td>
             </tr>
           </thead>
           <tbody>

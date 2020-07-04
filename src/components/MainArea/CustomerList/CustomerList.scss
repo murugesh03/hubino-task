@@ -1,0 +1,11 @@
+@import "../../../utilities/variables.scss";
+
+.card {
+  &-heading {
+    font-weight: 500;
+    font-size: 25px;
+  }
+  &-view {
+    border-top: 2px solid $lightGreen;
+  }
+}

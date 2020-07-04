@@ -2,4 +2,7 @@
 
 .nav-bar {
   background-color: $lightGrey;
+  &-icon {
+    font-size: 25px;
+  }
 }

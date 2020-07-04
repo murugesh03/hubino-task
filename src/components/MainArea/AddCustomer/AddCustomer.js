@@ -30,8 +30,10 @@ const AddCustomer = ({ addCustomer }) => {
     });
   };
   return (
-    <Card>
-      <Form className="p-5">
+    <Card className="card-view">
+      <Card.Title className="pt-4 mx-5 card-heading">Add Customer</Card.Title>
+      <hr />
+      <Form className="mx-5 pt-1 pb-5">
         <Form.Row>
           <Form.Group as={Col} controlId="formGridName">
             <Form.Label>Name</Form.Label>

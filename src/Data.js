@@ -67,7 +67,7 @@ const customerList = [
     id: 9,
     name: "bill gates",
     emailId: "billgates@windows.com",
-    contryCode: "1",
+    countryCode: "01",
     mobileNo: "951561546462",
     gender: "male",
   },
