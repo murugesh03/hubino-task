@@ -14,7 +14,7 @@ const CustomerList = ({ customer, updateCustomer }) => {
       <Card className="px-5 card-view">
         <Card.Title className="pt-3 pb-2 mx-2  card-heading">
           Customer List
-          <a href="#" className="float-right">
+          <a href="#" className="float-right card-dots">
             <MdMoreHoriz />
           </a>
         </Card.Title>
@@ -42,7 +42,7 @@ const CustomerList = ({ customer, updateCustomer }) => {
                   <td className="text-capitalize">{c.gender}</td>
                   <td>
                     <Button
-                      variant="primary"
+                      className="card-button"
                       onClick={() => {
                         console.log(c);
                         setEditModalData(c);

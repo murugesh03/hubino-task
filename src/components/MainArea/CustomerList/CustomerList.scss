@@ -8,4 +8,16 @@
   &-view {
     border-top: 2px solid $lightGreen;
   }
+  &-dots {
+    color: $slightDarkGray;
+  }
+  &-button {
+    background-color: $slightDarkGray;
+    color: black;
+    border: none;
+    &:hover {
+      background-color: grey;
+      color: white;
+    }
+  }
 }
