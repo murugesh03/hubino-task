@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Container } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import { addCustomer } from "../../Action/index";
 import { connect } from "react-redux";
 import { Switch, Route } from "react-router-dom";
@@ -9,7 +9,7 @@ import AddCustomer from "./AddCustomer/AddCustomer";
 
 const MainArea = ({ addCustomer }) => {
   return (
-    <Col className="main-area p-0" md={10}>
+    <div className="main-area ">
       <Container className="main-area-container">
         <Switch>
           <Route path="/" exact component={() => <CustomerList />} />
@@ -19,7 +19,7 @@ const MainArea = ({ addCustomer }) => {
           />
         </Switch>
       </Container>
-    </Col>
+    </div>
   );
 };
 const mapDispatchToProps = (dispatch) => ({

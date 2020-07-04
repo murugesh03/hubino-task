@@ -12,10 +12,11 @@ function App() {
   return (
     <Router>
       <Navbar />
-      <Row className="m-0">
+      <div className="mainArea">
         <SideBar />
+
         <MainArea />
-      </Row>
+      </div>
     </Router>
   );
 }

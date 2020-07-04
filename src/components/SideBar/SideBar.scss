@@ -3,6 +3,9 @@
 .sidebar {
   height: 100vh;
   background-color: $lightGrey;
+  display: table-cell;
+  width: 15%;
+  vertical-align: top;
   & ul {
     & li {
       list-style: none;

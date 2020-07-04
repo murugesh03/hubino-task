@@ -2,6 +2,9 @@
 
 .main-area {
   background-color: $slightDarkGray;
+  display: table-cell;
+  width: 85%;
+  vertical-align: top;
   &-container {
     margin-top: 5rem;
   }

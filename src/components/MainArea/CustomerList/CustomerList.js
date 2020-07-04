@@ -14,7 +14,7 @@ const CustomerList = ({ customer, updateCustomer }) => {
 
   return (
     <>
-      <Card>
+      <Card className="px-5 ">
         <Table responsive>
           <thead>
             <tr>
