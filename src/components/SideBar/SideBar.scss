@@ -9,4 +9,14 @@
   &-icon {
     font-size: 30px;
   }
+  &-name {
+    font-size: 14px;
+  }
+}
+.nav-link {
+  color: black;
+  &.active {
+    background-color: $lightGreen;
+    color: white;
+  }
 }
